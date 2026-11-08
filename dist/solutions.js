@@ -2,9 +2,6 @@
 function multiplyValue(value, multiplier = 2) {
     return value * multiplier;
 }
-console.log(multiplyValue(10));
-console.log(multiplyValue(10, 5));
-console.log(multiplyValue(7, 0));
 function processInput(input) {
     if (typeof input === "string") {
         return input.trim().toLowerCase();
@@ -16,16 +13,10 @@ function processInput(input) {
         return input ? "Active" : "Inactive";
     }
 }
-console.log(processInput("  TypeScript  "));
-console.log(processInput(7));
-console.log(processInput(true));
-console.log(processInput(false));
 function formatCoordinate(coordinate) {
     const [latitude, longitude, locationName] = coordinate;
     return `Location: ${locationName} (${latitude}, ${longitude})`;
 }
-console.log(formatCoordinate([23.81, 90.41, "Dhaka"]));
-console.log(formatCoordinate([22.35, 91.78, "Chittagong"]));
 function concatenateArrays(...arrays) {
     const result = [];
     for (const array of arrays) {
@@ -35,8 +26,6 @@ function concatenateArrays(...arrays) {
     }
     return result;
 }
-console.log(concatenateArrays(["a", "b"], ["c", "d"]));
-console.log(concatenateArrays([1, 2], [3, 4], [5]));
 function getPopularCourses(courses, minStudents) {
     return courses.filter((course) => course.isPublished && course.students >= minStudents);
 }
@@ -46,7 +35,6 @@ const courses = [
     { title: "Basic HTML", students: 45, isPublished: true },
     { title: "Next.js Pro", students: 85, isPublished: true }
 ];
-console.log(getPopularCourses(courses, 80));
 function pluckValues(items, key) {
     return items.map((item) => item[key]);
 }
@@ -55,8 +43,6 @@ const users = [
     { id: 2, name: "Sadia", role: "Editor" },
     { id: 3, name: "Tariq", role: "Subscriber" }
 ];
-console.log(pluckValues(users, "name"));
-console.log(pluckValues(users, "id"));
 class Employee {
     name;
     baseSalary;
@@ -79,8 +65,6 @@ class Manager extends Employee {
     }
 }
 const manager = new Manager("Alice", 50000, "Engineering");
-console.log(manager.getDetails());
-console.log(manager.getRoleInfo());
 function validateAgeAsync(age) {
     return new Promise((resolve, reject) => {
         if (age < 18) {
